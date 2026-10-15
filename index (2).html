@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMER STORE | شنط حريمي - بوكات ومحافظ - إكسسوارات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f1;--ink:#241a1c;--muted:#85736d;--wine:#5e2740;--rose:#c4788a;--rose-d:#9a4a62;--gold:#d4af6a;--champ:#f4e8d0;--line:rgba(120,80,70,.14);--glass:rgba(255,255,255,.78);--card:#fff;--soft:#4a3a36;--ls:140px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1015;--ink:#f3e9e6;--muted:#b9a39d;--wine:#e9b0c3;--rose-d:#e29bb0;--line:rgba(255,255,255,.14);--glass:rgba(48,26,36,.8);--card:#2a1620;--soft:#d9c8c3}}
+:root[data-theme="dark"]{--bg:#1a1015;--ink:#f3e9e6;--muted:#b9a39d;--wine:#e9b0c3;--rose-d:#e29bb0;--line:rgba(255,255,255,.14);--glass:rgba(48,26,36,.8);--card:#2a1620;--soft:#d9c8c3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;color:var(--ink);background:var(--bg);font-family:'Cairo','Segoe UI',Tahoma,sans-serif;line-height:1.75}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+.wrap.n{max-width:860px}
+h2{font-size:clamp(22px,4.5vw,30px);margin:0 0 4px;text-align:center;font-weight:800;color:var(--wine)}
+.bar{width:64px;height:3px;border-radius:3px;margin:10px auto 16px;background:linear-gradient(90deg,var(--gold),var(--rose))}
+.sub{text-align:center;color:var(--muted);margin:0 0 28px}
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nb{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.brand{font-weight:800;color:var(--wine);letter-spacing:1px;font-size:18px}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px;transition:.2s}
+.links a:hover{color:var(--rose-d)}
+.links a.on{background:linear-gradient(135deg,var(--rose),var(--rose-d));color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+/* hero */
+.hero{position:relative;overflow:hidden;text-align:center;color:#fff;padding:52px 0 64px;border-radius:0 0 38px 38px;background:radial-gradient(520px 280px at 85% 0,rgba(212,175,106,.38),transparent 62%),radial-gradient(460px 300px at 8% 100%,rgba(196,120,138,.5),transparent 62%),linear-gradient(135deg,#241019,#5e2740 62%,#7d3a57)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:42px 42px;-webkit-mask-image:radial-gradient(circle at 50% 35%,#000,transparent 72%);mask-image:radial-gradient(circle at 50% 35%,#000,transparent 72%)}
+.hero .wrap{position:relative}
+.hero.compact{padding:40px 0 46px;--ls:112px}
+.hero h1{margin:0;font-weight:800;font-size:clamp(28px,6vw,42px);letter-spacing:1px}
+.hero p{margin:6px auto 0;max-width:560px;color:rgba(255,255,255,.88)}
+.hero .tag{color:var(--champ);font-weight:600;font-size:17px;margin:4px auto 12px}
+.logo-frame{width:var(--ls);height:var(--ls);margin:0 auto 16px;border-radius:50%;padding:5px;background:conic-gradient(from 200deg,#d4af6a,#fbeccb,#c4788a,#d4af6a);box-shadow:0 0 0 9px rgba(255,255,255,.09),0 22px 50px rgba(0,0,0,.38),0 0 70px rgba(212,175,106,.38)}
+.logo-frame .in{width:100%;height:100%;border-radius:50%;background:#fff;padding:4px}
+.logo-frame img,.logo-frame .mono{width:100%;height:100%;border-radius:50%;object-fit:cover;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:34px;color:#9a4a62}
+.deco{position:absolute;color:#f0d28f;opacity:.36;pointer-events:none;width:clamp(60px,11vw,118px);height:auto;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;animation:fl 7s ease-in-out infinite}
+.d1{top:10%;right:4%;rotate:12deg}.d2{top:14%;left:4%;rotate:-14deg;animation-delay:-2s}
+.d3{bottom:8%;right:12%;rotate:-8deg;width:clamp(44px,8vw,86px);animation-delay:-4s}.d4{bottom:10%;left:11%;rotate:10deg;width:clamp(44px,8vw,86px);animation-delay:-1s}
+@keyframes fl{0%,100%{translate:0 0}50%{translate:0 -9px}}
+@media(prefers-reduced-motion:reduce){.deco{animation:none}html{scroll-behavior:auto}}
+/* buttons + cards */
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border-radius:999px;font:700 16px 'Cairo',sans-serif;border:0;cursor:pointer;transition:.25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.gold{background:linear-gradient(135deg,#f5d99a,#d4af6a);color:#3a2214;box-shadow:0 10px 26px rgba(212,175,106,.45)}
+.btn.glass{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.38)}
+.btn.wa{background:linear-gradient(135deg,#34e07a,#1fb856);color:#fff;box-shadow:0 10px 24px rgba(37,211,102,.35)}
+.btn.rose{background:linear-gradient(135deg,var(--rose),var(--rose-d));color:#fff}
+.gl{background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 14px 36px rgba(94,39,64,.09);border-radius:22px}
+.cta{position:relative;overflow:hidden;color:#fff;text-align:center;border-radius:28px;padding:42px 22px;margin:14px 0 26px;background:radial-gradient(420px 220px at 85% 0,rgba(212,175,106,.38),transparent 62%),linear-gradient(135deg,#241019,#5e2740)}
+.cta h2{color:#fff}.cta p{color:rgba(255,255,255,.88);margin:0 0 6px}
+section{padding:40px 0}
+.ic{border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fde9ee,#f4e8d0);box-shadow:0 8px 18px rgba(196,120,138,.22)}
+/* pages */
+.pg{display:none}.pg.on{display:block;animation:fi .45s ease}
+@keyframes fi{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.pg.on{animation:none}}
+.cats,.fgrid,.steps,.vals{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cat{padding:30px 20px;text-align:center;transition:.3s;display:block}
+.cat:hover{transform:translateY(-7px)}
+.cat .ic{width:78px;height:78px;font-size:36px}.cat b{display:block;font-size:20px}
+.cat .go{display:inline-block;margin-top:8px;color:var(--rose-d);font-weight:700;font-size:15px}
+.feat{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.f{text-align:center;padding:10px}.f .ic{width:64px;height:64px;font-size:28px}.f b,.v b{display:block;font-size:18px}
+.f p,.v p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.steps{margin-top:10px;counter-reset:s}
+.st{padding:30px 18px 22px;text-align:center;position:relative}
+.st::before{counter-increment:s;content:counter(s);position:absolute;top:-18px;right:50%;transform:translateX(50%);width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#f5d99a,#d4af6a);color:#3a2214;font-weight:800;display:flex;align-items:center;justify-content:center}
+.st b{display:block;margin:2px 0 4px;font-size:17px}.st p{margin:0;color:var(--muted);font-size:15px}
+/* products */
+.top{margin:26px auto 20px;display:flex;flex-direction:column;gap:14px;align-items:center}
+.search{width:100%;max-width:440px;position:relative}
+input,textarea{width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:14px;font:600 15px 'Cairo',sans-serif;background:var(--card);color:var(--ink);outline:none}
+.search input{border-radius:999px;padding:13px 46px 13px 16px}
+.search::before{content:"🔍";position:absolute;right:17px;top:50%;transform:translateY(-50%);font-size:15px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 22px;border-radius:999px;font:700 15px 'Cairo',sans-serif;cursor:pointer}
+.tab.active{background:linear-gradient(135deg,var(--rose),var(--rose-d));border-color:transparent;color:#fff}
+.count{color:var(--muted);font-size:14px;min-height:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px}
+.card{overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.img{position:relative;aspect-ratio:1/1;background:linear-gradient(135deg,#f8e9ee,#efe0cd);display:flex;align-items:center;justify-content:center;color:#b8a198;font-weight:800;letter-spacing:3px;overflow:hidden;cursor:zoom-in}
+.img img{width:100%;height:100%;object-fit:cover}
+.code{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#f5d99a,#d4af6a);color:#3a2214;font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px;direction:ltr}
+.body{padding:15px;display:flex;flex-direction:column;gap:4px;flex:1}
+.body .c{font-size:13px;color:var(--muted)}.price{font-weight:800;color:var(--wine);font-size:21px;margin:0 0 8px}
+.card .btn{margin-top:auto;padding:11px;border-radius:14px;font-size:15px;width:100%}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px 0}
+.lb{position:fixed;inset:0;background:rgba(20,10,14,.88);display:none;align-items:center;justify-content:center;z-index:90;padding:20px;cursor:zoom-out}
+.lb.on{display:flex}.lb img{max-width:100%;max-height:100%;border-radius:16px}
+/* about */
+.story{padding:30px 28px;margin:-26px 0 36px;position:relative;z-index:2}
+.story p{margin:0 0 14px;color:var(--soft);font-size:17px;line-height:1.95}.story p:last-child{margin:0}
+.hl{color:var(--rose-d);font-weight:800}
+.vals{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:0 0 36px}
+.v{padding:24px 16px;text-align:center}.v .ic{width:64px;height:64px;font-size:30px}
+/* contact */
+.main{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:-24px 0 34px;position:relative;z-index:2}
+@media(max-width:700px){.main{grid-template-columns:1fr}}
+.box{padding:28px 24px}.box h3{margin:0 0 4px;font-size:20px}.box p.d{margin:0 0 16px;color:var(--muted);font-size:15px}
+.wa-card{text-align:center}
+.wa-ic{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#34e07a,#1fb856);color:#fff;font-size:34px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.num{font-weight:800;font-size:23px;direction:ltr;display:block;margin:2px 0 16px;letter-spacing:1px;color:var(--wine)}
+.box .btn{width:100%}
+.btn.call{background:var(--card);color:var(--rose-d);border:2px solid var(--rose);margin-top:10px}
+label{display:block;font-weight:700;font-size:14px;margin:10px 0 4px}
+textarea{min-height:90px;resize:vertical}form .btn{margin-top:16px}
+details{margin-bottom:10px;overflow:hidden;border-radius:16px}
+summary{cursor:pointer;padding:15px 20px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}summary::after{content:"＋";color:var(--rose-d);font-size:20px}
+details[open] summary::after{content:"－"}details[open] summary{color:var(--rose-d)}
+details p{margin:0;padding:0 20px 17px;color:var(--soft);font-size:15px}
+.info{display:grid;padding:6px 22px;margin:0 0 34px}.it{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}.it:last-child{border:0}.it .ic{width:52px;height:52px;font-size:24px;margin:0;flex:none}.it b{display:block;font-size:17px;color:var(--wine)}.it p{margin:0;color:var(--soft);font-size:15px}.it .btn{margin-top:10px;padding:9px 20px;font-size:14px}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:8px 18px 26px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-bag" viewBox="0 0 100 100"><path d="M22 38h56l7 48H15z"/><path d="M36 38c0-24 28-24 28 0"/><path d="M24 54h52"/><circle cx="50" cy="62" r="3.5"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 100 100"><rect x="10" y="26" width="80" height="54" rx="10"/><path d="M10 44h80"/><rect x="62" y="52" width="28" height="20" rx="9"/><circle cx="75" cy="62" r="3"/></symbol>
+<symbol id="i-ring" viewBox="0 0 100 100"><circle cx="50" cy="64" r="22"/><path d="M50 14l13 12-13 14-13-14z"/><path d="M37 26h26"/></symbol>
+<symbol id="i-neck" viewBox="0 0 100 100"><path d="M14 18c2 46 70 46 72 0"/><circle cx="50" cy="62" r="6"/><path d="M50 68v8"/><circle cx="50" cy="80" r="3"/></symbol>
+</defs></svg>
+
+<nav class="nav"><div class="wrap nb">
+  <a class="brand" href="#home">AMER STORE</a>
+  <div class="links">
+    <a data-p="home" href="#home">الرئيسية</a><a data-p="products" href="#products">المنتجات</a><a data-p="about" href="#about">من نحن</a><a data-p="contact" href="#contact">تواصل معنا</a>
+  </div>
+</div></nav>
+
+<!-- الرئيسية -->
+<main class="pg" id="p-home">
+  <header class="hero"><div class="wrap">
+    <div class="logo-frame"><div class="in logo"></div></div>
+    <h1>AMER STORE</h1>
+    <p class="tag">شنط حريمي | بوكات ومحافظ | إكسسوارات</p>
+    <p>أهلًا بيكي في AMER STORE. أناقة وعملية وأسعار مناسبة، اختاري القطعة اللي تناسب ذوقك وإطلالتك وابعتيلنا كودها على واتساب.</p>
+    <div class="btns"><a class="btn gold" href="#products">🛍️ تصفحي المنتجات</a><a class="btn glass wa-link" target="_blank" rel="noopener" href="#">💬 تواصلي واتساب</a></div>
+  </div></header>
+  <section><div class="wrap">
+    <h2>أقسامنا</h2><div class="bar"></div><p class="sub">اختاري القسم اللي يعجبك وشوفي الموديلات والأسعار</p>
+    <div class="cats">
+      <a class="cat gl" href="#products/شنط"><span class="ic">👜</span><b>الشنط</b><span class="go">شوفي الشنط ←</span></a>
+      <a class="cat gl" href="#products/بوكات ومحافظ"><span class="ic">💳</span><b>البوكات والمحافظ</b><span class="go">شوفي البوكات والمحافظ ←</span></a>
+      <a class="cat gl" href="#products/إكسسوارات"><span class="ic">✨</span><b>الإكسسوارات</b><span class="go">شوفي الإكسسوارات ←</span></a>
+    </div>
+  </div></section>
+  <section class="feat"><div class="wrap">
+    <h2>ليه AMER STORE؟</h2><div class="bar"></div>
+    <div class="fgrid">
+      <div class="f"><div class="ic">💎</div><b>أناقة وعملية</b><p>تصاميم بتجمع بين الشكل الحلو وسهولة الاستخدام كل يوم.</p></div>
+      <div class="f"><div class="ic">🏷️</div><b>أسعار مناسبة</b><p>الأسعار واضحة جنب كل منتج من غير لف ودوران.</p></div>
+      <div class="f"><div class="ic">💬</div><b>تواصل سريع</b><p>أي استفسار عن التوافر والتفاصيل بنرد عليه على واتساب.</p></div>
+    </div>
+  </div></section>
+  <section><div class="wrap">
+    <h2>إزاي تطلبي؟</h2><div class="bar"></div><p class="sub">3 خطوات بسيطة</p>
+    <div class="steps">
+      <div class="st gl"><b>اختاري المنتج</b><p>تصفحي الأقسام وشوفي الصور والأسعار.</p></div>
+      <div class="st gl"><b>ابعتي الكود</b><p>اضغطي زر الاستفسار تحت المنتج، وكوده هيتبعت تلقائي في الرسالة.</p></div>
+      <div class="st gl"><b>نأكد معاكي</b><p>هنرد عليكي بالتوافر والتفاصيل ونكمل الطلب.</p></div>
+    </div>
+  </div></section>
+  <div class="wrap"><div class="cta"><h2>عندك استفسار؟</h2><div class="bar"></div><p>كلمينا على واتساب وهنساعدك تختاري المناسب ليكي.</p>
+    <div class="btns"><a class="btn wa wa-link" target="_blank" rel="noopener" href="#">💬 ابدئي المحادثة</a></div></div></div>
+</main>
+
+<!-- المنتجات -->
+<main class="pg" id="p-products">
+  <header class="hero compact"><div class="wrap"><div class="logo-frame"><div class="in logo"></div></div><h1>المنتجات</h1><p>ابحثي بالكود أو اختاري القسم</p></div></header>
+  <div class="wrap">
+    <div class="top">
+      <div class="search"><input id="q" type="search" placeholder="ابحثي بكود المنتج، مثال: BG-101" autocomplete="off" aria-label="بحث بكود المنتج"></div>
+      <div class="tabs" id="tabs"></div><div class="count" id="count"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div class="lb" id="lb"><img alt=""></div>
+</main>
+
+<!-- من نحن -->
+<main class="pg" id="p-about">
+  <header class="hero compact"><div class="wrap"><div class="logo-frame"><div class="in logo"></div></div><h1>من نحن</h1><p>أهلًا بيكم في AMER STORE</p></div></header>
+  <div class="wrap n">
+    <div class="story gl">
+      <p><span class="hl">AMER STORE</span> هو محل متخصص في عرض مجموعة متنوعة من المنتجات التي تجمع بين الأناقة والعملية والأسعار المناسبة.</p>
+      <p>بنحرص على تقديم تشكيلة من الشنط والبوكات والمحافظ والإكسسوارات، مع عرض صور المنتجات وأسعارها لتسهيل اختيار المنتج المناسب.</p>
+      <p>هدفنا إن تجربة التسوق تكون بسيطة وواضحة، من تصفح المنتجات إلى التواصل معنا للاستفسار عن الأسعار والتوافر والتفاصيل.</p>
+      <p>تقدروا تتصفحوا أقسام الكتالوج وتختاروا المنتجات اللي تعجبكم، وتتواصلوا معانا عبر واتساب لأي استفسار.</p>
+    </div>
+    <h2>إحنا بنهتم بإيه؟</h2><div class="bar"></div>
+    <div class="vals">
+      <div class="v gl"><div class="ic">💎</div><b>الأناقة</b><p>قطع بتكمّل إطلالتك وتناسب ذوقك.</p></div>
+      <div class="v gl"><div class="ic">👜</div><b>العملية</b><p>تصاميم مريحة تناسب استخدامك كل يوم.</p></div>
+      <div class="v gl"><div class="ic">🏷️</div><b>الأسعار المناسبة</b><p>أسعار واضحة ومعروضة جنب كل منتج.</p></div>
+      <div class="v gl"><div class="ic">🤝</div><b>تجربة بسيطة</b><p>من التصفح للاستفسار في خطوات سهلة وواضحة.</p></div>
+    </div>
+    <div class="cta"><h2>شكرًا لزيارتكم AMER STORE</h2><div class="bar"></div><p>نتمنى إن منتجاتنا تنال إعجابكم.</p>
+      <div class="btns"><a class="btn wa wa-link" target="_blank" rel="noopener" href="#">💬 تواصلي واتساب</a><a class="btn glass" href="#products">🛍️ المنتجات</a></div></div>
+  </div>
+</main>
+
+<!-- تواصل معنا -->
+<main class="pg" id="p-contact">
+  <header class="hero compact"><div class="wrap"><div class="logo-frame"><div class="in logo"></div></div><h1>تواصل معنا</h1><p>يسعدنا تواصلكم معنا للاستفسار عن المنتجات والأسعار والتوافر والألوان المتاحة. اختاروا وسيلة التواصل المناسبة لكم.</p></div></header>
+  <div class="wrap n">
+    <div class="main">
+      <div class="box gl wa-card"><div class="wa-ic">💬</div><h3>واتساب</h3><p class="d">أسرع طريقة للرد على استفساراتك</p>
+        <span class="num" id="numShow"></span>
+        <a class="btn wa wa-link" target="_blank" rel="noopener" href="#">ابدئي المحادثة</a>
+        <a class="btn call" id="callBtn" href="#">📞 اتصال مباشر</a></div>
+      <div class="box gl"><h3>ابعتيلنا رسالة</h3><p class="d">اكتبي بياناتك وهتتفتح رسالة جاهزة على واتساب</p>
+        <form id="form">
+          <label for="n">الاسم</label><input id="n" placeholder="اسمك" required>
+          <label for="c">كود المنتج (لو عندك)</label><input id="c" placeholder="مثال: BG-101" style="direction:ltr;text-align:right">
+          <label for="m">رسالتك</label><textarea id="m" placeholder="اكتبي استفسارك هنا..."></textarea>
+          <button class="btn rose" type="submit">إرسال على واتساب</button>
+        </form></div>
+    </div>
+    <h2>بيانات المحل</h2><div class="bar"></div>
+    <div class="info gl">
+      <div class="it"><span class="ic">📍</span><div><b>العنوان</b><p>محافظة الغربية - مركز زفتى - كفر السحيمية - بجوار المسجد الكبير</p><a class="btn rose" id="mapBtn" style="display:none" target="_blank" rel="noopener" href="#">🗺️ افتحي الموقع على الخريطة</a></div></div>
+      <div class="it"><span class="ic">🕒</span><div><b>مواعيد العمل</b><p>يوميًا من 3 عصرًا حتى 11 مساءً</p></div></div>
+      <div class="it"><span class="ic">👤</span><div><b>الإدارة</b><p>أ/ أحمد أيمن عامر</p></div></div>
+    </div>
+    <h2>أسئلة شائعة</h2><div class="bar"></div>
+    <details class="gl"><summary>إزاي أستفسر عن منتج؟</summary><p>اختاري المنتج من صفحة المنتجات، واضغطي زر "استفسري على واتساب" تحته. كود المنتج هيتبعت تلقائي في الرسالة.</p></details>
+    <details class="gl"><summary>إزاي أعرف السعر والتوافر؟</summary><p>الأسعار ظاهرة جنب كل منتج. وللتأكد من التوافر والتفاصيل ابعتيلنا كود المنتج على واتساب وهنرد عليكي.</p></details>
+    <details class="gl"><summary>إزاي أسأل عن الألوان المتاحة؟</summary><p>ابعتي كود المنتج على واتساب واسألي عن الألوان، وهنعرّفك بالمتاح.</p></details>
+  </div>
+</main>
+
+<footer><b>AMER STORE</b> - إدارة/ أ/ أحمد أيمن عامر<br>📍 محافظة الغربية - مركز زفتى - كفر السحيمية - بجوار المسجد الكبير<br>🕒 يوميًا من 3 عصرًا حتى 11 مساءً<br>© AMER STORE</footer>
+
+<script>
+/* ============ عدّل هنا فقط ============ */
+const WHATSAPP = "201557705699";
+const PHONE_DISPLAY = "01557705699";
+// رابط اللوكيشن من Google Maps (لو فاضي الزر مش هيظهر)
+const MAPS = "";
+// اللوجو: ضعيه هنا كـ data:image/... (base64) عشان يظهر. لو فاضي بيظهر AE
+const LOGO = "https://i.postimg.cc/0jh2s38G/IMG-3671.jpg";
+// المنتجات: code فريد / cat من: "شنط" "بوكات ومحافظ" "إكسسوارات" / price / image (data:image/... أو فاضي)
+const PRODUCTS = [
+  { code: "BG-101", cat: "شنط",          price: "450 جنيه", image: "" },
+  { code: "BG-102", cat: "شنط",          price: "650 جنيه", image: "" },
+  { code: "BG-103", cat: "شنط",          price: "550 جنيه", image: "" },
+  { code: "WL-201", cat: "بوكات ومحافظ", price: "250 جنيه", image: "" },
+  { code: "WL-202", cat: "بوكات ومحافظ", price: "180 جنيه", image: "" },
+  { code: "AC-301", cat: "إكسسوارات",    price: "120 جنيه", image: "" },
+  { code: "AC-302", cat: "إكسسوارات",    price: "90 جنيه",  image: "" }
+];
+/* ============ من هنا مفيش تعديل ============ */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const wa = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
+
+// زخارف الهيرو واللوجو
+const DECO = ['bag','wallet','ring','neck'].map((n,i)=>'<svg class="deco d'+(i+1)+'" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-'+n+'"/></svg>').join("");
+document.querySelectorAll(".hero").forEach(h => h.insertAdjacentHTML("afterbegin", DECO));
+document.querySelectorAll(".logo").forEach(b => {
+  if(!LOGO){ b.innerHTML = '<div class="mono">AE</div>'; return; }
+  b.innerHTML = '<img alt="AMER STORE" src="'+esc(LOGO)+'">';
+  b.firstChild.onerror = () => { b.innerHTML = '<div class="mono">AE</div>'; };
+});
+document.querySelectorAll(".wa-link").forEach(a => a.href = wa("أهلاً AMER STORE 👋 عاوزة أستفسر عن المنتجات"));
+
+// المنتجات
+const CATS = ["الكل","شنط","بوكات ومحافظ","إكسسوارات"];
+let current = "الكل", query = "";
+function render(){
+  $("tabs").innerHTML = CATS.map(c => '<button class="tab '+(c===current?'active':'')+'" data-c="'+esc(c)+'">'+esc(c)+'</button>').join("");
+  const q = query.trim().toLowerCase();
+  const list = PRODUCTS.filter(p => (current==="الكل"||p.cat===current) && (!q||p.code.toLowerCase().includes(q)));
+  $("count").textContent = list.length ? list.length + " منتج" : "";
+  if(!list.length){ $("grid").innerHTML = '<div class="empty">مفيش منتجات مطابقة 💕<br>جربي كود تاني أو قسم تاني</div>'; return; }
+  $("grid").innerHTML = list.map(p => {
+    const msg = "أهلاً AMER STORE 👋\nعاوزة أستفسر عن المنتج كود: "+p.code+"\n(قسم: "+p.cat+" - السعر: "+p.price+")\nممكن أعرف التوافر؟";
+    return '<div class="card gl"><div class="img" data-img="'+esc(p.image||"")+'">'+
+      (p.image ? '<img src="'+esc(p.image)+'" alt="كود '+esc(p.code)+'" loading="lazy">' : 'AMER STORE')+
+      '<span class="code">'+esc(p.code)+'</span></div><div class="body"><div class="c">'+esc(p.cat)+'</div><div class="price">'+esc(p.price)+
+      '</div><a class="btn wa" href="'+wa(msg)+'" target="_blank" rel="noopener">💬 استفسري على واتساب</a></div></div>';
+  }).join("");
+}
+$("tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if(!b) return; current = b.dataset.c; render(); });
+$("q").addEventListener("input", e => { query = e.target.value; render(); });
+$("grid").addEventListener("click", e => { const b = e.target.closest(".img"); if(!b||!b.dataset.img) return; $("lb").querySelector("img").src = b.dataset.img; $("lb").classList.add("on"); });
+$("lb").addEventListener("click", () => $("lb").classList.remove("on"));
+
+// تواصل
+$("numShow").textContent = PHONE_DISPLAY;
+if(MAPS){ $("mapBtn").href = MAPS; $("mapBtn").style.display = ""; }
+$("callBtn").href = "tel:+" + WHATSAPP;
+$("form").addEventListener("submit", e => {
+  e.preventDefault();
+  let t = "أهلاً AMER STORE 👋\nأنا " + $("n").value.trim();
+  if($("c").value.trim()) t += "\nعاوزة أستفسر عن المنتج كود: " + $("c").value.trim();
+  if($("m").value.trim()) t += "\n" + $("m").value.trim();
+  window.open(wa(t), "_blank", "noopener");
+});
+
+// التنقل بين الصفحات
+function route(){
+  const parts = decodeURIComponent(location.hash.slice(1)).split("/");
+  const page = ["home","products","about","contact"].includes(parts[0]) ? parts[0] : "home";
+  document.querySelectorAll(".pg").forEach(p => p.classList.toggle("on", p.id === "p-"+page));
+  document.querySelectorAll(".links a").forEach(a => a.classList.toggle("on", a.dataset.p === page));
+  if(page === "products"){ current = CATS.includes(parts[1]) ? parts[1] : "الكل"; render(); }
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
