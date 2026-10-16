@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add("js")</script>
 <title>AMER STORE | شنط حريمي - بوكات ومحافظ - إكسسوارات</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -119,6 +120,33 @@ details[open] summary::after{content:"－"}details[open] summary{color:var(--ros
 details p{margin:0;padding:0 20px 17px;color:var(--soft);font-size:15px}
 .info{display:grid;padding:6px 22px;margin:0 0 34px}.it{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}.it:last-child{border:0}.it .ic{width:52px;height:52px;font-size:24px;margin:0;flex:none}.it b{display:block;font-size:17px;color:var(--wine)}.it p{margin:0;color:var(--soft);font-size:15px}.it .btn{margin-top:10px;padding:9px 20px;font-size:14px}
 footer{text-align:center;color:var(--muted);font-size:14px;padding:8px 18px 26px}
+/* mobile menu */
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--wine);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0}
+.burger span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;transition:transform .25s,opacity .2s}
+.nav.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:700px){
+.burger{display:inline-flex}
+.nb{flex-wrap:nowrap}
+.links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:2px;padding:10px 14px 16px;background:var(--bg);border-bottom:1px solid var(--line);border-radius:0 0 24px 24px;box-shadow:0 18px 30px rgba(94,39,64,.14);opacity:0;visibility:hidden;translate:0 -8px;transition:opacity .22s ease,translate .22s ease,visibility 0s linear .22s}
+.nav.open .links{opacity:1;visibility:visible;translate:0 0;transition:opacity .22s ease,translate .22s ease,visibility 0s}
+.links a{padding:13px 18px;border-radius:14px;font-size:16px}
+}
+/* floating whatsapp */
+.fab{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:56px;min-width:56px;padding:0 20px;border-radius:999px;background:linear-gradient(135deg,#25d366,#128c4a);color:#fff;font:700 15px 'Cairo',sans-serif;box-shadow:0 10px 26px rgba(18,140,74,.45),0 2px 6px rgba(0,0,0,.18);transition:transform .25s}
+.fab:hover{transform:translateY(-3px) scale(1.03)}
+.fab .ico{font-size:26px;line-height:1}
+.fab::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;animation:ping 2.8s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%,100%{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
+@media(max-width:480px){.fab{width:56px;padding:0}.fab .t{display:none}}
+/* scroll reveal */
+.js .rv{opacity:0;translate:0 18px}
+.js .rv.in{animation:rv .55s ease forwards;animation-delay:var(--d,0ms)}
+.js .rv.now{animation:none;opacity:1;translate:0 0}
+@keyframes rv{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:none}.js .rv.in{animation:none}.fab::before{animation:none}.nav .links,.burger span{transition:none}}
+footer{padding-bottom:92px}
 </style>
 </head>
 <body>
@@ -129,9 +157,10 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:8px 18px 26px
 <symbol id="i-neck" viewBox="0 0 100 100"><path d="M14 18c2 46 70 46 72 0"/><circle cx="50" cy="62" r="6"/><path d="M50 68v8"/><circle cx="50" cy="80" r="3"/></symbol>
 </defs></svg>
 
-<nav class="nav"><div class="wrap nb">
+<nav class="nav" id="nav"><div class="wrap nb">
   <a class="brand" href="#home">AMER STORE</a>
-  <div class="links">
+  <button class="burger" id="burger" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <div class="links" id="menu">
     <a data-p="home" href="#home">الرئيسية</a><a data-p="products" href="#products">المنتجات</a><a data-p="about" href="#about">من نحن</a><a data-p="contact" href="#contact">تواصل معنا</a>
   </div>
 </div></nav>
@@ -240,6 +269,8 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:8px 18px 26px
 
 <footer><b>AMER STORE</b> - إدارة/ أ/ أحمد أيمن عامر<br>📍 محافظة الغربية - مركز زفتى - كفر السحيمية - بجوار المسجد الكبير<br>🕒 يوميًا من 3 عصرًا حتى 11 مساءً<br>© AMER STORE</footer>
 
+<a class="fab wa-link" target="_blank" rel="noopener" href="#" aria-label="تواصلي معنا على واتساب"><span class="ico" aria-hidden="true">💬</span><span class="t">كلمينا واتساب</span></a>
+
 <script>
 /* ============ عدّل هنا فقط ============ */
 const WHATSAPP = "201557705699";
@@ -265,7 +296,7 @@ const DECO = ['bag','wallet','ring','neck'].map((n,i)=>'<svg class="deco d'+(i+1
 document.querySelectorAll(".hero").forEach(h => h.insertAdjacentHTML("afterbegin", DECO));
 document.querySelectorAll(".logo").forEach(b => {
   if(!LOGO){ b.innerHTML = '<div class="mono">AE</div>'; return; }
-  b.innerHTML = '<img alt="AMER STORE" src="'+esc(LOGO)+'">';
+  b.innerHTML = '<img alt="AMER STORE" loading="lazy" decoding="async" src="'+esc(LOGO)+'">';
   b.firstChild.onerror = () => { b.innerHTML = '<div class="mono">AE</div>'; };
 });
 document.querySelectorAll(".wa-link").forEach(a => a.href = wa("أهلاً AMER STORE 👋 عاوزة أستفسر عن المنتجات"));
@@ -273,7 +304,7 @@ document.querySelectorAll(".wa-link").forEach(a => a.href = wa("أهلاً AMER 
 // المنتجات
 const CATS = ["الكل","شنط","بوكات ومحافظ","إكسسوارات"];
 let current = "الكل", query = "";
-function render(){
+function render(animate=true){
   $("tabs").innerHTML = CATS.map(c => '<button class="tab '+(c===current?'active':'')+'" data-c="'+esc(c)+'">'+esc(c)+'</button>').join("");
   const q = query.trim().toLowerCase();
   const list = PRODUCTS.filter(p => (current==="الكل"||p.cat===current) && (!q||p.code.toLowerCase().includes(q)));
@@ -282,13 +313,14 @@ function render(){
   $("grid").innerHTML = list.map(p => {
     const msg = "أهلاً AMER STORE 👋\nعاوزة أستفسر عن المنتج كود: "+p.code+"\n(قسم: "+p.cat+" - السعر: "+p.price+")\nممكن أعرف التوافر؟";
     return '<div class="card gl"><div class="img" data-img="'+esc(p.image||"")+'">'+
-      (p.image ? '<img src="'+esc(p.image)+'" alt="كود '+esc(p.code)+'" loading="lazy">' : 'AMER STORE')+
+      (p.image ? '<img src="'+esc(p.image)+'" alt="كود '+esc(p.code)+'" width="600" height="600" loading="lazy" decoding="async">' : 'AMER STORE')+
       '<span class="code">'+esc(p.code)+'</span></div><div class="body"><div class="c">'+esc(p.cat)+'</div><div class="price">'+esc(p.price)+
       '</div><a class="btn wa" href="'+wa(msg)+'" target="_blank" rel="noopener">💬 استفسري على واتساب</a></div></div>';
   }).join("");
+  reveal($("grid"), animate);
 }
 $("tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if(!b) return; current = b.dataset.c; render(); });
-$("q").addEventListener("input", e => { query = e.target.value; render(); });
+$("q").addEventListener("input", e => { query = e.target.value; render(false); });
 $("grid").addEventListener("click", e => { const b = e.target.closest(".img"); if(!b||!b.dataset.img) return; $("lb").querySelector("img").src = b.dataset.img; $("lb").classList.add("on"); });
 $("lb").addEventListener("click", () => $("lb").classList.remove("on"));
 
@@ -303,6 +335,34 @@ $("form").addEventListener("submit", e => {
   if($("m").value.trim()) t += "\n" + $("m").value.trim();
   window.open(wa(t), "_blank", "noopener");
 });
+
+// ظهور الكروت عند التمرير
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+}), {threshold:.12, rootMargin:"0px 0px -6% 0px"}) : null;
+function reveal(root, animate=true){
+  (root||document).querySelectorAll(".cat,.f,.st,.v,.card,.story,.box").forEach(el => {
+    if(el.classList.contains("rv")) return;
+    el.classList.add("rv");
+    if(!animate || !io){ el.classList.add("in","now"); return; }
+    el.style.setProperty("--d", (Array.prototype.indexOf.call(el.parentNode.children, el) % 4) * 70 + "ms");
+    io.observe(el);
+  });
+}
+reveal(document);
+
+// منيو الموبايل
+const nav = $("nav"), burger = $("burger");
+function menu(open){
+  nav.classList.toggle("open", open);
+  burger.setAttribute("aria-expanded", open);
+  burger.setAttribute("aria-label", open ? "إغلاق القائمة" : "فتح القائمة");
+}
+burger.addEventListener("click", () => menu(!nav.classList.contains("open")));
+$("menu").addEventListener("click", e => { if(e.target.closest("a")) menu(false); });
+document.addEventListener("click", e => { if(!nav.contains(e.target)) menu(false); });
+document.addEventListener("keydown", e => { if(e.key === "Escape" && nav.classList.contains("open")){ menu(false); burger.focus(); } });
+window.matchMedia("(min-width:701px)").addEventListener("change", e => { if(e.matches) menu(false); });
 
 // التنقل بين الصفحات
 function route(){
